@@ -30,7 +30,7 @@ li {
   color: #868686;
 }
 /* Шапка */
-.header > div {
+.header {
   color: white;
   text-align: center;
   background-size: cover;
@@ -50,19 +50,13 @@ li {
   margin: 0 10px;
   color: white;
   transition: 0.3s;
-}
-.button_empty {
-  background: transparent;
-  border: 2px solid white;
-}
-.button_full {
   background: #00897b;
   border: 2px solid #00897b;
 }
-.button_empty:hover,
-.button_full:hover {
+
+.button:hover {
   border: 6px double white;
-  background: #00895b;
+  background: transparent;
   padding: 6px 21px;
 }
 /* О нас */
@@ -79,11 +73,57 @@ li {
 .about_text {
   color: #212121;
   font-size: 15px;
-  margin-bottom: 110px;
+  margin-bottom: 115px;
 }
 .about_h3 {
   margin-top: 30px;
   margin-bottom: 20px;
   font-family: "Open Sans Semibold";
   font-size: 20px;
+}
+/* Наши услуги*/
+.services {
+  padding-top: 165px;
+  padding-bottom: 125px;
+  background: #e4fdf9;
+  text-align: center;
+}
+.our_card {
+  background: white;
+  padding: 50px 25px 40px;
+  transition: 0.3s;
+  margin-bottom: 30px;
+}
+.our_card:hover {
+  background: #00897b;
+  color: white;
+  box-shadow: 0px 10px 12px -3px rgba(0, 0, 0, 0.26);
+}
+.our_card:hover .icon {
+  color: white;
+}
+.our_card:hover .about_text {
+  transition: 0.3s;
+  color: white;
+}
+.our_card:hover .button-services {
+  border: 1px solid white;
+  transition: 0.3s;
+  color: white;
+}
+.our_card .about_text {
+  margin-bottom: 45px;
+}
+.icon {
+  transition: 0.3s;
+  font-size: 60px;
+  color: black;
+}
+.button-services {
+  transition: 0.3s;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid black;
+  padding: 14px 12px 14px;
+  font-family: "Open Sans Semibold";
 }
