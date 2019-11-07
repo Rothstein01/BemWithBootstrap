@@ -46,6 +46,7 @@ li {
   margin-bottom: 100px;
 }
 .button {
+  text-transform: uppercase;
   padding: 10px 25px;
   margin: 0 10px;
   color: white;
@@ -126,4 +127,33 @@ li {
   border: 1px solid black;
   padding: 14px 12px 14px;
   font-family: "Open Sans Semibold";
+}
+/* Portfolio */
+.portfolio {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 135px;
+}
+.portfolio button {
+  color: black;
+  background: transparent;
+  border: 1px solid black;
+}
+.portfolio button:hover {
+  color: white !important;
+  background: #00897b !important;
+  border: 1px solid #00897b;
+  padding: 10px 25px;
+}
+button[filter="all"] {
+  background: #00897b;
+  color: white;
+  border: 1px solid #00897b;
+}
+.portfolio img {
+  margin-bottom: 30px;
+  width: 350px;
+}
+.filter {
+  padding: 120px 0;
 }
