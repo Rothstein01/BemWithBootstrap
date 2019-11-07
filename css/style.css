@@ -134,18 +134,19 @@ li {
   margin-top: 120px;
   margin-bottom: 135px;
 }
-.portfolio button {
+.portfolio .button {
   color: black;
   background: transparent;
   border: 1px solid black;
 }
-.portfolio button:hover {
-  color: white !important;
-  background: #00897b !important;
+.portfolio button:hover,
+.button.focused {
+  color: white;
+  background: #00897b;
   border: 1px solid #00897b;
   padding: 10px 25px;
 }
-button[filter="all"] {
+.button.all {
   background: #00897b;
   color: white;
   border: 1px solid #00897b;
@@ -156,4 +157,21 @@ button[filter="all"] {
 }
 .filter {
   padding: 120px 0;
+}
+div[filter]:hover img {
+  filter: brightness(50%);
+  transition: 0.3s;
+}
+.text {
+  display: none;
+}
+div[filter]:hover .text {
+  display: block;
+  width: 100%;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 3;
+  text-align: center;
 }
