@@ -176,7 +176,7 @@ div[filter]:hover .text {
   text-align: center;
 }
 /* Pricing plan */
-.pricing  {
+.pricing {
   padding-top: 165px;
   padding-bottom: 125px;
   color: black;
@@ -185,10 +185,10 @@ div[filter]:hover .text {
 }
 .price {
   transition: 0.3s;
- background: #fff;
+  background: #fff;
 }
-.price:hover{
-  box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.39);
+.price:hover {
+  box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.39);
 }
 .price_head {
   color: white;
@@ -196,7 +196,7 @@ div[filter]:hover .text {
   padding-bottom: 65px;
   background-image: url(../img/pricing_bg.png);
   background-size: cover;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   max-height: 211px;
 }
 .price_head p {
@@ -205,14 +205,14 @@ div[filter]:hover .text {
 .price_head {
   font-size: 50px;
 }
-.price_head sub, sup {
-  vertical-align: middle ;
+.price_head sub,
+sup {
+  vertical-align: middle;
   font-size: 17px;
 }
 .price_body {
-font-size: 17px;
-color: #212121;
-
+  font-size: 17px;
+  color: #212121;
 }
 .price_body ul li {
   padding-top: 28px;
@@ -222,20 +222,82 @@ color: #212121;
   border-bottom: 1px solid #bfbfbf;
 }
 .price_footer {
-padding: 60px 0;
-
+  padding: 60px 0;
 }
-.price_footer button{
-  padding: 10px 25px; 
-  color: #212121 ;  
-  background: transparent ;
+.price_footer button {
+  padding: 10px 25px;
+  color: #212121;
+  background: transparent;
   border: 1px solid #212121;
   /* transition: 0.3s; */
 }
-.price_footer button:hover{
+.price_footer button:hover {
   padding: 10px 20px;
   text-transform: uppercase;
-  color:white ;  
-  background: #00897b ;
+  color: white;
+  background: #00897b;
   border: 1px solid #00897b;
 }
+/* Team */
+.team {
+  padding-top: 165px;
+  padding-bottom: 125px;
+  color: black;
+  background: #fff;
+  text-align: center;
+}
+.team h4 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "Open Sans Semibold";
+
+}
+.team p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+}
+.icons a i {
+  transition: 0.3s;
+}
+.icons i:nth-child(1) {
+  color: #f0f1f1;
+}
+.icons i:nth-child(2) {
+  color: #00897b;
+}
+.icons a:hover i:nth-child(1) {
+  color: #3949ab;
+}
+.icons a:hover i:nth-child(2) {
+  color: #fff;
+}
+.team img {
+  margin: 0 auto;
+  width: 340px;
+}
+.multiple-items {
+  margin-top: 125px;
+  /* margin-bottom: 115px; */
+}
+.dots-style {
+  margin-top: 115px;
+  display: flex;
+  justify-content: center;
+}
+.dots-style button {
+  background: #00897b ;
+  border:   none; 
+  border-radius: 50%;
+  font-size: 0;
+  height: 15px; 
+  width: 15px;
+  margin: 5px;
+}
+.dots-style li[class="slick-active"] button {
+  background: #3949ab;
+}
+

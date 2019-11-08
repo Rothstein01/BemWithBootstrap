@@ -89,4 +89,13 @@ $(document).ready(function() {
       $(this).css("color", "white"); */
     }
   });
+  //Slider
+  $('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
+    dots: true,
+    dotsClass: 'dots-style'
+  });
 });
