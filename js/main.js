@@ -1,4 +1,4 @@
-//This is 1 version plugin + my change for button effect
+//? This is 1 version plugin + my change for button effect
 /* $(document).ready(function() {
   $('.button[filter = "wd"]').click(function() {
     if ($(this).attr("val") == "off") {
@@ -53,20 +53,20 @@
   });
 }); */
 
-//This is 2 version plugin
-// I delete delay from hide() and show() because in my opinion it is not beautiful
+//? This is 2 version plugin
+//? I delete delay from hide() and show() because in my opinion it is not beautiful
 $(document).ready(function() {
   $(".button[filter]").click(function() {
     if ($(this).attr("filter") == "all") {
       if ($(this).attr("val") == "off") {
         $(".button[filter]").attr("val", "off");
         $(this).attr("val", "on");
-        //Version author for button effect (work for me only set 2 class(exp. .button.focused but not .focused because style overlaps))
+        //? Version author for button effect (work for me only set 2 class(exp. .button.focused but not .focused because style overlaps))
         $(".button[filter]").removeClass("focused");
         $(this).addClass("focused");
         //
         $(".filter > div").show();
-        // my version change for button effect
+        //? my version change for button effect
         /*$(".button[filter]").css("background", "inherit");
         $(this).css("background", "#00897b");
         $(".button[filter]").css("color", "black");
@@ -75,7 +75,7 @@ $(document).ready(function() {
     } else if ($(this).attr("val") == "off") {
       $(".button[filter]").attr("val", "off");
       $(this).attr("val", "on");
-      //Version author for button effect (work for me only set 2 class(exp. .button.focused but not .focused because style overlaps))
+      //? Version author for button effect (work for me only set 2 class(exp. .button.focused but not .focused because style overlaps))
       $(".button[filter]").removeClass("focused");
       $(".button[filter='all']").removeClass("all");
       $(this).addClass("focused");
@@ -91,30 +91,30 @@ $(document).ready(function() {
     }
   });
   /* Slider */
-  $(".multiple-items").slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: false,
-    dots: true,
-    dotsClass: "dots-style",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+  // $(".multiple-items").slick({
+  //   infinite: true,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 3,
+  //   arrows: false,
+  //   dots: true,
+  //   dotsClass: "dots-style",
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1
+  //       }
+  //     }
+  //   ]
+  // });
   /* Menu */
   $('ul.menu a[href^="#"').click(function() {
     var target = $(this).attr("href");
@@ -154,4 +154,48 @@ $(document).ready(function() {
       800
     );
   });
+  /* Another slider */
+    $(".main-carousel").flickity({
+    // options
+    groupCells: true,
+    wrapAround: true,
+    prevNextButtons: false,
+
+  });
 });
+
+/* $(window).on('load resize',function() {
+  if ($("html").width() > 1200) {
+    $(".main-carousel").flickity({
+      groupCells: true,
+      wrapAround: true,
+      prevNextButtons: false
+    });
+  } else {
+    $(".main-carousel").flickity({
+      groupCells: true,
+      wrapAround: true,
+      prevNextButtons: false
+    });
+  }
+}); */
+/* $(document).ready(function() {
+  if ($("html").width() > 1200) {
+    $(".main-carousel").flickity({
+      cellAlign: "left",
+      contain: true,
+      groupCells: true,
+      groupCells: 3,
+      wrapAround: true,
+      prevNextButtons: false
+    });
+  } else {
+    $(".main-carousel").flickity({
+      cellAlign: "left",
+      contain: true,
+      groupCells: false,
+      wrapAround: true,
+      prevNextButtons: false
+    });
+  }
+}); */

@@ -1,4 +1,5 @@
 @import "fonts.css";
+
 body {
   font-family: "Open Sans";
 }
@@ -48,20 +49,26 @@ li {
   font-size: 20px;
   margin-bottom: 100px;
 }
+button:focus {
+  outline: none;
+}
 .button {
+  width: 150px;
+  height: 50px;
   text-transform: uppercase;
-  padding: 10px 25px;
+  /* padding: 10px 25px; */
   margin: 0 10px;
   color: white;
   transition: 0.3s;
   background: #00897b;
   border: 2px solid #00897b;
 }
-
 .button:hover {
+  /* width: 150px;
+  height: 50px; */
   border: 6px double white;
   background: transparent;
-  padding: 6px 21px;
+  /* padding: 6px 21px; */
 }
 /* О нас */
 .about {
@@ -147,7 +154,7 @@ li {
   color: white;
   background: #00897b;
   border: 1px solid #00897b;
-  padding: 10px 25px;
+  /* padding: 10px 25px; */
 }
 .button.all {
   background: #00897b;
@@ -287,12 +294,14 @@ sup {
   margin-top: 125px;
   /* margin-bottom: 115px; */
 }
-.dots-style {
+.dots-style,
+.flickity-page-dots {
   margin-top: 115px;
   display: flex;
   justify-content: center;
 }
-.dots-style button {
+.dots-style button,
+ol.flickity-page-dots li.dot {
   background: #00897b;
   border: none;
   border-radius: 50%;
@@ -300,6 +309,13 @@ sup {
   height: 15px;
   width: 15px;
   margin: 5px;
+}
+
+.flickity-page-dots {
+  position: inherit;
+}
+.flickity-page-dots li.dot.is-selected {
+  background: #3949ab;
 }
 .dots-style li[class="slick-active"] button {
   background: #3949ab;
@@ -346,10 +362,6 @@ sup {
 .blog p {
   font-size: 15px;
 }
-/* .left,
-.right {
-  margin: 0 -40px;
-} */
 .button_blog {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -484,7 +496,102 @@ sup {
     margin-top: 0;
     margin-left: 10px;
   }
+  .blog span {
+    margin-right: 10px;
+  }
   .footer input {
     margin-top: 30px;
+  }
+  /* .carousel-cell {
+    width: 50%;
+  } */
+  .team img {
+    width: 310px;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .carousel-cell {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 20px;
+  }
+  .header_title {
+    font-size: 35px;
+  }
+  .header_text {
+    margin-bottom: 20px;
+  }
+  .button {
+    margin-bottom: 10px;
+    width: 150px;
+    font-size: 15px;
+  }
+  .about {
+    padding: 20px;
+  }
+  .about_text {
+    margin-bottom: 20px;
+  }
+  .services {
+    padding: 20px;
+  }
+  .portfolio {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  .filter {
+    padding: 20px;
+  }
+  .pricing {
+    padding: 20px;
+  }
+  .team {
+    padding: 40px 0px;
+  }
+  .multiple-items,
+  .dots-style {
+    margin-top: 20px;
+  }
+  .team img {
+    max-width: 300px;
+  }
+  .left,
+  .right {
+    flex-direction: column;
+  }
+  .right > div:last-child {
+    order: 2;
+  }
+  .blog span {
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .button_blog {
+    margin-top: 20px;
+  }
+  .footer {
+    padding-top: 20px;
+  }
+  .footer input {
+    padding: 15px;
+  }
+  .circle + p {
+    font-size: 15px;
+  }
+  .fa-map-marker-alt,
+  .fa-envelope,
+  .fa-phone {
+    font-size: 42px;
+  }
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+  .carousel-cell {
+    width: inherit;
   }
 }
